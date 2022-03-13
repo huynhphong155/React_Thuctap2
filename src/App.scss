@@ -1,0 +1,110 @@
+/* viết css trong đay */
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  background-color: #f9f6f4;
+}
+
+.App {
+  height: 100vh;
+  background-color: #f9f6f4;
+}
+
+h1 {
+  margin: 0;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: calc(10px + 2vmin);
+
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  max-width: 1080px;
+  margin: auto;
+}
+
+.wrapper {
+  margin-left: 321px;
+  padding: 0 33px;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.Management,
+.header {
+  &-search {
+    position: relative;
+    padding: 10px 16px;
+    background: #ededed;
+    border-radius: 12px;
+    max-width: 470px;
+    width: 100%;
+    img {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+    }
+    input {
+      background: none;
+      border: none;
+      width: 100%;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        font-size: 16px;
+        opacity: 0.3;
+        color: #1e0d03;
+      }
+    }
+  }
+}

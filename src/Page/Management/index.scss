@@ -1,0 +1,97 @@
+.Management {
+  &-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 32px;
+  }
+  &-des {
+    font-size: 28px;
+    line-height: 33px;
+    margin-bottom: 32px;
+  }
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    h3 {
+      color: #49c510;
+    }
+  }
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 500px;
+    padding: 32px 65px;
+    background: #ffffff;
+    box-shadow: 4px 4px 25px 4px rgba(154, 202, 245, 0.25);
+    border-radius: 16px;
+  }
+  &-total {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 32px;
+    background: #efefef;
+    border-radius: 8px;
+    h3 {
+      color: #373839;
+      font-weight: 900;
+    }
+    h4 {
+      color: #cc5c00;
+    }
+  }
+  .statusSuccess,
+  .statusFail {
+    display: flex;
+    align-items: center;
+    min-width: 100px;
+    padding: 8px 7px;
+    background: none;
+    border-radius: 8px;
+    border: 1px solid #0b80ec;
+    color: #0b80ec;
+    font-weight: 900;
+    white-space: nowrap;
+    span {
+      margin: 0 10px;
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50px;
+      background: #0b80ec;
+    }
+  }
+  .statusFail {
+    border: 1px solid #ed2025;
+    color: #ed2025;
+    span {
+      background: #ed2025;
+    }
+  }
+  &-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -10px;
+    button {
+      margin: 0 10px;
+      min-height: 48px;
+      padding: 15px 18px;
+      background: #fff;
+      border: 1px solid #ff993c;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 26px;
+      color: #ff993c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
