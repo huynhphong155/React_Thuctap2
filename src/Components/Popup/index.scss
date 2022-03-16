@@ -27,20 +27,6 @@
       user-select: none;
       cursor: pointer;
     }
-    button {
-      border: none;
-      padding: 15px 32px;
-      border-radius: 8px;
-      margin: 0 15px;
-      margin-top: 48px;
-      font-weight: 900;
-      font-size: 18px;
-      min-width: 160px;
-      cursor: pointer;
-      &:focus {
-        outline: none;
-      }
-    }
     .button {
       &-success {
         background: #ff7506;

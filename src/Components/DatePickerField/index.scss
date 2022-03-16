@@ -1,0 +1,36 @@
+@import "react-modern-calendar-datepicker/lib/DatePicker.css";
+
+.custom-input {
+  display: flex;
+  flex-direction: column;
+  label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  input {
+    width: 100%;
+    min-height: 42px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #c4cdd5;
+    color: #161d25;
+    border-radius: 8px;
+    &:focus {
+      outline: none;
+    }
+    &::-webkit-input-placeholder {
+      font-size: 14px;
+    }
+    &::-moz-placeholder {
+      font-size: 14px;
+    }
+    &:-ms-input-placeholder {
+      font-size: 14px;
+    }
+    &:-moz-placeholder {
+      font-size: 14px;
+    }
+  }
+}

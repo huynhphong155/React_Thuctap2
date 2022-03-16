@@ -1,0 +1,62 @@
+.FromFilter {
+  &-wrapper {
+    padding: 24px 64px;
+  }
+  &-date {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+  }
+  &-radio,
+  &-checked {
+    text-align: left;
+    p {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1e0d03;
+      margin-bottom: 10px;
+    }
+    > div {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+  &-checked {
+    label {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+      margin-bottom: 10px;
+    }
+  }
+  h3 {
+    color: #1e0d03;
+    font-weight: 700;
+    font-size: 24px;
+  }
+  .mb-24 {
+    margin-bottom: 24px;
+  }
+  .Submit {
+    button {
+      border: none;
+      padding: 15px 32px;
+      border-radius: 8px;
+      margin: 0 15px;
+      font-weight: 700;
+      font-size: 18px;
+      min-width: 160px;
+      cursor: pointer;
+      background: none;
+      color: #ff993c;
+      border: 1px solid #ff993c;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

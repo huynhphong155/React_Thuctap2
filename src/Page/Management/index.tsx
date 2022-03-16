@@ -7,6 +7,9 @@ import RenderUI from "../../HOC/RenderUI";
 import { isNonEmptyArray } from "../../utils";
 import { ListBilling } from "../../utils/schema";
 import "./index.scss";
+import Popup from "../../Components/Popup";
+import FromFilter from "./FromFilter";
+import DatePicker from "react-modern-calendar-datepicker";
 
 const listHeader = [
   { name: "STT", key: "STT" },
@@ -21,8 +24,16 @@ const listHeader = [
 
 function Management() {
   const [defaultData, setDefaultData] = useState<any>([]);
+  const [firstLoading, setFirstLoading] = useState<boolean>(true);
   const [data, setData] = useState<any>([]);
+  const [dataFilter, setDataFilter] = useState<any>({
+    From: { day: 1, month: 3, year: 2022 },
+    To: { day: 2, month: 3, year: 2022 },
+    picked: "All",
+    checked: "All",
+  });
   const typingTimeoutRef = useRef<any>();
+  const [isShowPopup, setIsShowPopup] = useState<boolean>(false);
 
   const statusSuccess = (
     <button className="statusSuccess">
@@ -42,13 +53,32 @@ function Management() {
         ListBilling.data.map((ele) => {
           return {
             ...ele,
+            idStatus: ele?.status,
             status: ele?.status ? statusSuccess : statusFail,
           };
         });
       setDefaultData(listData);
       setData(listData);
+      setFirstLoading(false);
     }, 500);
   }, []);
+
+  useEffect(() => {
+    if (firstLoading) return;
+    const listData: any =
+      isNonEmptyArray(ListBilling.data) &&
+      defaultData
+        .filter((ele: any) => {
+          if (dataFilter.picked === "All") return ele;
+          const check = dataFilter.picked === "Used" ? true : false;
+          return ele.idStatus === check;
+        })
+        .filter((ele: any) => {
+          if (dataFilter.checked === "All") return ele;
+          return ele.IdCheckIn == dataFilter.checked;
+        });
+    setData(listData);
+  }, [dataFilter]);
 
   const handleSearch = (e: any) => {
     const { value } = e.target;
@@ -64,6 +94,10 @@ function Management() {
         setData(result);
       }
     }, 500);
+  };
+
+  const handleClosePopup = () => {
+    setIsShowPopup(false);
   };
 
   return (
@@ -82,7 +116,10 @@ function Management() {
                 />
               </div>
               <div className="Management-filter">
-                <button className="Management-filter__Tickets">
+                <button
+                  className="Management-filter__Tickets"
+                  onClick={() => setIsShowPopup(true)}
+                >
                   <img src={icon7} alt="" />
                   Lọc vé
                 </button>
@@ -95,11 +132,20 @@ function Management() {
               listHeader={listHeader}
               listBody={data}
               isDetail={false}
-              isShowNon
+              isShowNon={false}
             />
           </div>
           <Pagination />
         </div>
+        <Popup isShowPopup={isShowPopup} handleClosePopup={handleClosePopup}>
+          <div className="Management-Filter">
+            <FromFilter
+              setIsShowPopup={setIsShowPopup}
+              setDataFilter={setDataFilter}
+              dataFilter={dataFilter}
+            />
+          </div>
+        </Popup>
       </div>
     </RenderUI>
   );

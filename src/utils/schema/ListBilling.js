@@ -8,7 +8,8 @@ const ListBilling = {
       status: true,
       Date: "14/04/2021",
       TicketDate: "14/04/2021",
-      CheckIn: "Cổng 1",
+      CheckIn: "Cổng 2",
+      IdCheckIn: 2,
     },
     {
       STT: 2,
@@ -19,6 +20,7 @@ const ListBilling = {
       Date: "14/04/2021",
       TicketDate: "14/04/2021",
       CheckIn: "Cổng 1",
+      IdCheckIn: 1,
     },
     {
       STT: 3,
@@ -28,7 +30,8 @@ const ListBilling = {
       status: true,
       Date: "14/04/2021",
       TicketDate: "14/04/2021",
-      CheckIn: "Cổng 1",
+      CheckIn: "Cổng 3",
+      IdCheckIn: 3,
     },
     {
       STT: 4,
@@ -38,7 +41,8 @@ const ListBilling = {
       status: false,
       Date: "14/04/2021",
       TicketDate: "14/04/2021",
-      CheckIn: "Cổng 1",
+      CheckIn: "Cổng 2",
+      IdCheckIn: 2,
     },
     {
       STT: 5,
@@ -49,6 +53,7 @@ const ListBilling = {
       Date: "14/04/2021",
       TicketDate: "14/04/2021",
       CheckIn: "Cổng 1",
+      IdCheckIn: 1,
     },
     {
       STT: 6,
@@ -59,6 +64,7 @@ const ListBilling = {
       Date: "14/04/2021",
       TicketDate: "14/04/2021",
       CheckIn: "Cổng 1",
+      IdCheckIn: 1,
     },
     {
       STT: 7,
@@ -68,7 +74,8 @@ const ListBilling = {
       status: false,
       Date: "14/04/2021",
       TicketDate: "14/04/2021",
-      CheckIn: "Cổng 1",
+      CheckIn: "Cổng 2",
+      IdCheckIn: 2,
     },
     {
       STT: 8,
@@ -79,6 +86,7 @@ const ListBilling = {
       Date: "14/04/2021",
       TicketDate: "14/04/2021",
       CheckIn: "Cổng 1",
+      IdCheckIn: 1,
     },
     {
       STT: 9,
@@ -88,7 +96,8 @@ const ListBilling = {
       status: false,
       Date: "14/04/2021",
       TicketDate: "14/04/2021",
-      CheckIn: "Cổng 1",
+      CheckIn: "Cổng 3",
+      IdCheckIn: 3,
     },
   ],
 };
